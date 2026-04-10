@@ -8,22 +8,22 @@ from domain.use_case.post.delete_post import DeletePostUseCase
 from domain.use_case.post.change_post import ChangePostUseCase
 
 def get_user_by_login_use_case() -> GetUserByLoginUseCase:
-    return GetUserByLoginUseCase
+    return GetUserByLoginUseCase()
 
 def create_user_use_case() -> CreateUserUseCase:
-    return CreateUserUseCase
+    return CreateUserUseCase()
 
 def delete_user_use_case() -> DeleteUserUseCase:
-    return DeleteUserUseCase
+    return DeleteUserUseCase()
 
 def get_post_by_id_use_case() -> GetPostByIdUseCase:
-    return GetPostByIdUseCase
+    return GetPostByIdUseCase()
 
 def create_post_use_case() -> CreatePostUseCase:
-    return CreatePostUseCase
+    return CreatePostUseCase()
 
 def change_post_use_case() -> ChangePostUseCase:
-    return ChangePostUseCase
+    return ChangePostUseCase()
 
 def delete_post_use_case() -> DeletePostUseCase:
-    return DeletePostUseCase
+    return DeletePostUseCase()
