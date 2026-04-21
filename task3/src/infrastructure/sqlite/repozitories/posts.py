@@ -40,8 +40,8 @@ class PostRepozitory:
         session.delete(post)
         session.commit()
 
-    def change(self, session: Session, new_post: str) -> PostModel:
-        old_post = session.query(PostModel).filter(PostModel.id==id)
+    def change(self, session: Session, new_post: str, old_post_id: int) -> PostModel:
+        old_post = session.query(PostModel).filter(PostModel.id==old_post_id)
         if not old_post:
             raise PostNotFoundException
         return old_post.update(

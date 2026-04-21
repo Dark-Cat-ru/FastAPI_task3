@@ -92,10 +92,11 @@ async def create_post(
 @router.put("/change_post", status_code=status.HTTP_202_ACCEPTED, response_model=Post)
 async def change_post(
     new_post: str,
-    use_case: ChangePostUseCase = Depends(change_post_use_case)
+    old_post_id: int,
+    use_case: ChangePostUseCase = Depends(change_post_use_case),
 ) -> Post:
     try:
-        return await use_case.execute(new_post=new_post)
+        return await use_case.execute(new_post=new_post, old_post_id=old_post_id)
     except PostIdIsNotUniqueException as exc:
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,
