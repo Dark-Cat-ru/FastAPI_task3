@@ -5,6 +5,8 @@
  - в терминале пропишите
    - pip install fastapi
    - pip install uvicorn
+   - pip install sqlalchemy
+   - pip install alembic
  - нажмите правой кнопкой на папку `src`
    - выберете `Mark Directory as` -> `Source Root`
  - запустите файл main.py
